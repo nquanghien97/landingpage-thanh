@@ -175,13 +175,41 @@ export default function Home() {
             </tbody>
           </table>
         </section>
-        <section className="bg-[url('/bg-20240923154851-vvtwf.png')]">
-          <div>
-            <div className="w-[200px] h-[72px] m-auto pt-4 mb-4">
-              <Image src="/logo.png" alt="logo" width={500} height={500} />
-            </div>
-            <h3 className="uppercase text-[#853f05] text-3xl font-bold px-4 text-center bg-text mb-4 py-2">Hướng dẫn sử dụng</h3>
+        <section className="bg-[url('/bg-20240923154851-vvtwf.png')] px-4 bg-cover mb-4">
+          <div className="w-[200px] h-[72px] m-auto pt-4 mb-4">
+            <Image src="/logo.png" alt="logo" width={500} height={500} />
           </div>
+          <h3 className="uppercase text-[#853f05] text-3xl font-bold px-4 text-center bg-text py-2">Hướng dẫn sử dụng</h3>
+          <ul className="list-decimal px-4 font-bold mb-2">
+            <li>Sử dụng 200ml nước sôi để nguội 45 độ C vào cốc rửa sạch</li>
+            <li>Cho 5 muống gạt vào cốc nước khuấy đề cho đến khi sữa hòa tan hoàn toàn</li>
+            <li>Sử dụng sữa được pha trong vòng 1 giờ sau khi pha</li>
+          </ul>
+          <div className="flex relative mb-4">
+            <div className="w-full h-full">
+              <Image src="/huong-dan.png" alt='' width={450} height={600} className="w-full h-full" />
+            </div>
+          </div>
+          <div className="flex">
+            <div className="w-1/2">
+              <h3 className="font-bold text-xl uppercase bg-text text-center mb-2">Bảo quản</h3>
+              <ul className="list-decimal px-4 font-bold mb-2 text-sm">
+                <li className="leading-6">Bảo quản ở nơi khô ráo thoáng mát, tránh ánh nắng trực tiếp</li>
+                <li className="leading-6">Lon đã mở nắp chỉ nên sử dụng trong 3 tuần</li>
+              </ul>
+            </div>
+            <div className="w-1/2">
+              <h3 className="font-bold text-xl uppercase bg-text text-center mb-2">Hạn sử dụng</h3>
+              <ul className="list-decimal px-4 font-bold mb-2 text-sm">
+                <li className="leading-6">Hạn sử dụng: 24 tháng kể từ ngày sản xuất</li>
+                <li className="leading-6">NSX & HSD: xem dưới đáy lon</li>
+              </ul>
+            </div>
+          </div>
+          <div className="">
+            <Image src="/b163da9a9ca83af663b9-removebg-preview-20240924030925-thoc3.png" alt="" width={432} height={577} />
+          </div>
+          <h3 className="text-[#a40202] font-bold text-sm px-4">Sữa Dạ Dày Nutri Nano Curcumin cung cấp dinh dưỡng tương đương 1 bữa ăn đầy đủ, có thể thay thế bữa ăn phụ hàng ngày, giúp bổ sung dưỡng chất một cách tiện lợi và hiệu quả cho sức khỏe dạ dày.</h3>
         </section>
       </main>
     </>
