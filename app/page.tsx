@@ -15,7 +15,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const [isViewMore, setIsViewMore] = useState(false);
-  const classViewMore = isViewMore ? '' : 'relative max-h-[3980px] overflow-hidden'
+  const classViewMore = isViewMore ? '' : 'relative max-h-[3860px] overflow-hidden'
   return (
     <>
       <header className="fixed top-0 right-0 left-0 h-[76px] z-10">
