@@ -1,3 +1,5 @@
+'use client';
+
 import AddressIcon from '@/assets/icons/AddressIcon'
 import Phone2Icon from '@/assets/icons/Phone2Icon'
 import PhoneIcon from '@/assets/icons/PhoneIcon'
@@ -9,8 +11,11 @@ import Slider3 from '@/components/Slider3'
 import { choose } from '@/config/choose'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react';
 
 export default function Home() {
+  const [isViewMore, setIsViewMore] = useState(false);
+  const classViewMore = isViewMore ? '' : 'max-h-[3820px] overflow-hidden'
   return (
     <>
       <header className="fixed top-0 right-0 left-0 h-[76px] z-10">
@@ -31,7 +36,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="pt-[76px] max-w-xl m-auto bg-[#fffff4]">
+      <main className={`pt-[76px] max-w-xl m-auto bg-[#fffff4] relative ${classViewMore}`}>
         <section className="h-[460px] mb-4">
           <div className="bg-[url('/section1/image1.jpg')] h-full bg-cover relative">
             <div className="w-[120px] h-7 absolute bottom-[15%] left-4">
@@ -288,7 +293,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="fixed right-4 left-4 bottom-0 z-10">
+        {/* <div className="fixed right-4 left-4 bottom-0 z-10">
           <div className="flex justify-center gap-2 mb-2 max-w-xl m-auto">
             <div className="flex flex-col gap-1 w-1/2">
               <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[red] rounded-xl" />
@@ -298,6 +303,9 @@ export default function Home() {
               <span className="text-[#fffc01] font-bold uppercase text-[14px]">Bấm để nhận tư vấn</span>
             </div>
           </div>
+        </div> */}
+        <div className={`${isViewMore ? '' : 'bg-view-more absolute bottom-0 left-0 right-0 pt-[200px]'} flex justify-center`}>
+          <button className="text-center underline" onClick={() => setIsViewMore(pre => !pre)}>{isViewMore ? 'Rút gọn' : 'Xem thêm'}</button>
         </div>
       </main>
       <footer className="bg-[#fdd86f] max-w-xl m-auto">

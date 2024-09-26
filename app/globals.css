@@ -49,3 +49,7 @@ html {
 #form {
   scroll-margin-top: 76px;
 }
+
+.bg-view-more {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 15.75%, #fff 75.51000000000001%);
+}
