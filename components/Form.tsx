@@ -44,9 +44,9 @@ function Form() {
   }
   return (
     <div className="mb-4">
-      <h3 className="uppercase text-[#853f05] text-2xl font-bold px-4 text-center bg-text mb-4">Đăng ký để nhận ưu đãi tại đây!</h3>
+      <h3 className="uppercase text-[#853f05] text-xl font-bold px-4 text-center bg-text mb-4">Đăng ký để nhận ưu đãi tại đây!</h3>
       <form onSubmit={onSubmit}>
-        <div className="flex flex-col gap-2 mb-2 w-2/3 m-auto">
+        <div className="flex flex-col gap-2 mb-2 px-4 m-auto">
           <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[#a40202] rounded-xl" name="fullName" onChange={handleChange} />
           <input type="text" placeholder="Số điện thoại" className="px-4 py-1 border border-[#a40202] rounded-xl" name="phoneNumber" onChange={handleChange} />
           <input type="text" placeholder="Địa chỉ" className="px-4 py-1 border border-[#a40202] rounded-xl" name="address" onChange={handleChange} />

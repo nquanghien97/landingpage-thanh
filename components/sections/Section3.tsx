@@ -3,10 +3,10 @@ import Image from "next/image"
 function Section3() {
   return (
     <section className="mx-4">
-      <div className="w-5/6 m-auto ">
+      <div className="w-full m-auto ">
         <div className="flex items-center justify-center gap-4 mb-2">
           <Image src="/section3/image1.jpg" alt="" width={400} height={400} className="w-20 h-20 rounded-full" />
-          <p className="text-[14px] text-[#853f05] font-bold">HỎI ĐÁP CHUYÊN GIA ĐẦU NGÀNH VỀ VẤN ĐỀ DẠ DÀY TẠI ĐÂY !</p>
+          <p className="text-[14px] text-[#853f05] font-bold text-center">HỎI ĐÁP CHUYÊN GIA ĐẦU NGÀNH VỀ VẤN ĐỀ DẠ DÀY TẠI ĐÂY !</p>
         </div>
         <div className="flex gap-2 mb-2">
           <div className="flex flex-col gap-2 w-1/2">

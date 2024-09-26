@@ -15,12 +15,12 @@ import { useState } from 'react';
 
 export default function Home() {
   const [isViewMore, setIsViewMore] = useState(false);
-  const classViewMore = isViewMore ? '' : 'relative max-h-[3840px] overflow-hidden'
+  const classViewMore = isViewMore ? '' : 'relative max-h-[3980px] overflow-hidden'
   return (
     <>
       <header className="fixed top-0 right-0 left-0 h-[76px] z-10">
         <div className="flex justify-between max-w-xl m-auto bg-[#fffff4] px-4 h-full">
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             <Image src="/logo.png" alt="logo" width={175} height={76} />
           </div>
           <div className="flex items-center">
@@ -38,8 +38,11 @@ export default function Home() {
       </header>
       <main className={`pt-[76px] max-w-xl m-auto bg-[#fffff4]`}>
         <div className={`${classViewMore}`}>
-          <section className="h-[660px] mb-4">
-            <div className="bg-[url('/section1/image1.png')] h-full w-full bg-cover relative">
+          <section className="w-full mb-4">
+            <div className="h-full w-full relative">
+              <div>
+                <Image src="/section1/image1.png" alt="" width={804} height={878} />
+              </div>
               <div className="w-[120px] h-7 absolute bottom-[15%] left-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 311.78 187.07" fill="url(&quot;#SHAPE506_mobile_gradient&quot;)"><defs id="SHAPE506_defs"><linearGradient id="SHAPE506_desktop_gradient" gradientTransform="rotate(0)"><stop offset="0%" stopColor="rgba(13, 98, 242, 1.0)"></stop><stop offset="100%" stopColor="rgba(7, 58, 145, 1.0)"></stop></linearGradient><linearGradient id="SHAPE506_mobile_gradient" gradientTransform="rotate(0)"><stop offset="0%" stopColor="rgba(255, 14, 1, 1.0)"></stop><stop offset="100%" stopColor="rgba(253, 216, 111, 1)"></stop></linearGradient></defs><path d="M13,14.49.06,170a15.8,15.8,0,0,0,17.51,17l280.19-31.73A15.8,15.8,0,0,0,311.57,137L292.68,22a15.79,15.79,0,0,0-15-13.23L29.29,0A15.79,15.79,0,0,0,13,14.49Z"></path></svg>
               </div>
@@ -60,17 +63,19 @@ export default function Home() {
                 <div className="h-2 w-5/6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1920 174" fill="rgba(255, 188, 1, 1)"><defs></defs><polygon points="1920 150 0 150 0 0 960 88.5 1920 0 1920 150"></polygon><polygon points="1920 162 0 162 0 12 960 91.6 1920 12 1920 162"></polygon><polygon points="1920 174 0 174 0 24 960 94.8 1920 24 1920 174"></polygon></svg>
                 </div>
-                <div className="overflow-y-auto h-[200px] scrollbar-hidden">
+                <div className="overflow-y-auto scrollbar-hidden">
                   <div className="flex w-full">
-                    <div className="h-[400px] w-[74px] bg-[url('/section2/image1.png')] bg-cover" />
-                    <div className="w-full text-[10px] font-bold mt-5">
-                      <p className="mb-1 text-sm leading-6">20% (1000mg/100g bột sữa) mỗi ly tương đương 2kg nghệ tươi hỗ trợ làm lành vùng niêm mạc dạ dày tổn thương</p>
-                      <p className="mb-2 text-sm leading-6">Sữa đầu  xuất hiện cuối thời kỳ mang thai và 24h đầu sau sinh tăng cường hệ miễn dịch, chống viêm, hỗ trợ tiêu hóa.</p>
-                      <p className="mb-2 text-sm leading-6">Giúp xương chắc khỏe, tăng cường dịch khớp, Hỗ trợ ngăn ngừa đau nhức, thoái hóa xương khớp, loãng xương</p>
-                      <p className="mb-2 text-sm leading-6">Chứa 30 vitamin và khoáng chất thiết yếu: C, E, B3, B5, B6, B2, B1, A, Acid Folic, K2, K1, Biotin, D, B12....</p>
-                      <p className="mb-1 text-sm leading-6">Hỗ trợ tái tạo và sửa chữa các tế bào và mô bị tổn thương trong niêm mạc dạ dày, giúp vết loét mau lành</p>
-                      <p className="mb-2 text-sm leading-6">Cải thiện tiêu hóa, tăng cường lợi khuẩn đường ruột, giảm nguy cơ đầy bụng đồng thời ít ảnh hưởng đến đường huyết</p>
-                      <p className="text-sm leading-6">Là 2 chất xơ hòa tan, giúp kích thích sự phát triển của các vi khuẩn có lợi và giảm thiểu vi khuẩn có hại cho dạ dày</p>
+                    <div className="h-[702px]">
+                      <Image src="/section2/image1.png" alt="" width={186} height={903} className="h-full" />
+                    </div>
+                    <div className="w-full text-[10px] font-bold mt-8 ml-[-24px]">
+                      <p className="mb-4 text-sm leading-6 min-h-[80px] flex items-center">20% (1000mg/100g bột sữa) mỗi ly tương đương 2kg nghệ tươi hỗ trợ làm lành vùng niêm mạc dạ dày tổn thương</p>
+                      <p className="mb-4 text-sm leading-6 min-h-[80px] flex items-center">Sữa đầu  xuất hiện cuối thời kỳ mang thai và 24h đầu sau sinh tăng cường hệ miễn dịch, chống viêm, hỗ trợ tiêu hóa.</p>
+                      <p className="mb-6 text-sm leading-6 min-h-[80px] flex items-center">Giúp xương chắc khỏe, tăng cường dịch khớp, Hỗ trợ ngăn ngừa đau nhức, thoái hóa xương khớp, loãng xương</p>
+                      <p className="mb-4 text-sm leading-6 min-h-[80px] flex items-center">Chứa 30 vitamin và khoáng chất thiết yếu: C, E, B3, B5, B6, B2, B1, A, Acid Folic, K2, K1, Biotin, D, B12....</p>
+                      <p className="mb-4 text-sm leading-6 min-h-[80px] flex items-center">Hỗ trợ tái tạo và sửa chữa các tế bào và mô bị tổn thương trong niêm mạc dạ dày, giúp vết loét mau lành</p>
+                      <p className="mb-4 text-sm leading-6 min-h-[80px] flex items-center">Cải thiện tiêu hóa, tăng cường lợi khuẩn đường ruột, giảm nguy cơ đầy bụng đồng thời ít ảnh hưởng đến đường huyết</p>
+                      <p className="text-sm leading-6 min-h-[80px] flex items-center">Là 2 chất xơ hòa tan, giúp kích thích sự phát triển của các vi khuẩn có lợi và giảm thiểu vi khuẩn có hại cho dạ dày</p>
                     </div>
                   </div>
                 </div>
@@ -88,7 +93,7 @@ export default function Home() {
                 <Image src="/image2.png" alt="logo" width={450} height={450} className="w-full h-full" />
               </div>
             </div>
-            <div className="border-8 rounded-3xl border-double border-[#ffbc01] bg-[#ffef571a] p-4">
+            <div className="px-4">
               <h3 className="uppercase text-center text-lg font-bold mb-2 text-[#853f05] bg-text">NUTRI NANO CURCUMIN SỮA DẠ DÀY NGUYÊN LIỆU NHẬP KHẨU NEW ZEALAND HỖ TRỢ VIÊM LOÉT DẠ DÀY ĐƯỢC CẤP CHỨNG NHẬN FDA</h3>
               <p className="text-center text-xs text-[#853f05] bg-text">(Cục Quản lý Thực phẩm và Dược phẩm Hoa Kỳ)</p>
             </div>
