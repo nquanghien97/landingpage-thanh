@@ -289,7 +289,7 @@ export default function Home() {
           </div>
         </section>
         <div className="fixed right-4 left-4 bottom-0">
-          <div className="flex justify-center gap-2 mb-2">
+          <div className="flex justify-center gap-2 mb-2 max-w-xl m-auto">
             <div className="flex flex-col gap-2 w-1/2">
               <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[red] rounded-xl" />
               <input type="text" placeholder="Số điện thoại" className="px-4 py-1 border border-[red] rounded-xl" />
