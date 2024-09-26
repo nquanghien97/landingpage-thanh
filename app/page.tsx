@@ -1,7 +1,11 @@
+import AddressIcon from '@/assets/icons/AddressIcon'
+import Phone2Icon from '@/assets/icons/Phone2Icon'
 import PhoneIcon from '@/assets/icons/PhoneIcon'
+import Form from '@/components/Form'
 import Section3 from '@/components/sections/Section3'
-import Slider1 from '@/components/slider1'
+import Slider1 from '@/components/Slider1'
 import Slider2 from '@/components/Slider2'
+import Slider3 from '@/components/Slider3'
 import { choose } from '@/config/choose'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -156,24 +160,26 @@ export default function Home() {
         </section>
         <section className="mb-4">
           <h3 className="text-[#853f05] uppercase font-bold text-center">Tiêu chi đảm bảo cho sự lựa chọn của bạn</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Tiêu chí</th>
-                <th>Sữa non Nutri Nano Curcumin</th>
-                <th>Thuốc điều trị dạ dày</th>
-              </tr>
-            </thead>
-            <tbody>
-              {choose.map(item => (
-                <tr key={item.tieu_chi}>
-                  <td>{item.tieu_chi}</td>
-                  <td>{item.sua_non}</td>
-                  <td>{item.thuoc}</td>
+          <div className="px-4">
+            <table>
+              <thead>
+                <tr>
+                  <th className="w-1/5 px-2 text-center border bg-[#ccc]">Tiêu chí</th>
+                  <th className="w-2/5 px-2 text-center border bg-[#ccc]">Sữa non<br />Nutri Nano Curcumin</th>
+                  <th className="w-2/5 px-2 text-center border bg-[#ccc]">Thuốc điều trị dạ dày</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {choose.map(item => (
+                  <tr key={item.tieu_chi}>
+                    <td className="w-1/5 px-2 border">{item.tieu_chi}</td>
+                    <td className="w-1/5 px-2 border">{item.sua_non}</td>
+                    <td className="w-1/5 px-2 border">{item.thuoc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
         <section className="bg-[url('/bg-20240923154851-vvtwf.png')] px-4 bg-cover mb-4">
           <div className="w-[200px] h-[72px] m-auto pt-4 mb-4">
@@ -211,7 +217,92 @@ export default function Home() {
           </div>
           <h3 className="text-[#a40202] font-bold text-sm px-4">Sữa Dạ Dày Nutri Nano Curcumin cung cấp dinh dưỡng tương đương 1 bữa ăn đầy đủ, có thể thay thế bữa ăn phụ hàng ngày, giúp bổ sung dưỡng chất một cách tiện lợi và hiệu quả cho sức khỏe dạ dày.</h3>
         </section>
+        <Slider3 />
+        <section className="bg-section bg-cover mb-4">
+          <div className="w-[240px] m-auto">
+            <Image src="/logo.png" alt="logo" width={500} height={500} />
+          </div>
+          <div className="w-full">
+            <Image src="/logo-10-20240924073439-g6jo7.png" alt="" width={650} height={450} />
+          </div>
+          <Form />
+        </section>
+        <section className="mb-4">
+          <h3 className="uppercase text-[#853f05] text-2xl font-bold text-center bg-text mb-4">Kết quả tuyệt vời</h3>
+          <div>
+            <Image src="/logo-4-20240923160332-eyt_6.png" alt="" width={750} height={750} />
+          </div>
+        </section>
+        <section className="bg-[#ccc]">
+          <h3 className="uppercase text-[#853f05] text-2xl font-bold px-4 text-center py-4 bg-text">Quyền lợi khi mua Nutri Nano Curcumin trên gian hàng chính hãng</h3>
+          <div className="mt-[-30px]">
+            <Image src="/quyen-loi-20240924082300-gneig.png" alt="" width={1288} height={400} />
+            <div className="flex justify-evenly mt-[-28px]">
+              <p className="w-[100px] text-sm font-bold text-center">Sản phẩm chính hàng</p>
+              <p className="w-[100px] text-sm font-bold text-center">Ưu đãi hấp dẫn</p>
+              <p className="w-[100px] text-sm font-bold text-center">Miễn phí vận chuyển toàn quốc</p>
+            </div>
+          </div>
+          <h4 className="text-[#853f05] text-xl font-bold px-4 text-center bg-text mb-4">Công ty TNHH Tổ Hợp Thương Mai Và Đầu Tư Quốc Tế Hoàng Gia</h4>
+          <div className="mx-4 mb-4">
+            <div className="flex">
+              <div className="mr-2">
+                <AddressIcon />
+              </div>
+              <p className="mb-2">
+                <span className="font-bold">Địa chỉ: </span>
+                KĐT Gamuda Gardens, Trần Phú, Hoàng Mai, Hà Nội
+              </p>
+            </div>
+            <div className="flex">
+              <div className="mr-2">
+                <Phone2Icon />
+              </div>
+              <p className="mb-2">
+                <span className="font-bold">Hotline: </span>
+                0975.688.897
+              </p>
+            </div>
+          </div>
+          <div>
+            <h4 className="text-[#853f05] text-xl font-bold px-4 bg-text mb-2">Chính sách chung</h4>
+            <div className="flex justify-center w-5/6 m-auto">
+              <ul className="list-disc w-full flex justify-between">
+                <div className="flex flex-col">
+                  <li className="font-bold text-sm mb-2">
+                    <Link href="/">Chính sách mua hàng</Link>
+                  </li>
+                  <li className="font-bold text-sm mb-2">
+                    <Link href="/">Chính sách quyền riêng tư</Link>
+                  </li>
+                </div>
+                <div className="flex flex-col">
+                  <li className="font-bold text-sm mb-2">
+                    <Link href="/">Chính sách thanh toán</Link>
+                  </li>
+                  <li className="font-bold text-sm mb-2">
+                    <Link href="/">Chính sách đổi trả</Link>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div className="fixed right-4 left-4 bottom-0">
+          <div className="flex justify-center gap-2 mb-2">
+            <div className="flex flex-col gap-2 w-1/2">
+              <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[red] rounded-xl" />
+              <input type="text" placeholder="Số điện thoại" className="px-4 py-1 border border-[red] rounded-xl" />
+            </div>
+            <div className="flex items-center justify-center w-1/2 bg-button rounded-xl">
+              <span className="text-[#fffc01] font-bold uppercase text-[14px]">Bấm để nhận tư vấn</span>
+            </div>
+          </div>
+        </div>
       </main>
+      <footer className="bg-[#fdd86f]">
+        <p className="px-4 py-2 font-semibold text-white uppercase text-center">Sản phẩm không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh</p>
+      </footer>
     </>
 
 
