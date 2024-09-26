@@ -13,7 +13,7 @@ function Section3() {
             <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[red] rounded-xl" />
             <input type="text" placeholder="Số điện thoại" className="px-4 py-1 border border-[red] rounded-xl" />
           </div>
-          <div className="flex items-center justify-center w-1/2 bg-button rounded-xl">
+          <div className="flex items-center justify-center w-1/2 bg-button rounded-xl cursor-pointer">
             <span className="text-[#fffc01] font-bold uppercase text-[14px]">Bấm để nhận tư vấn</span>
           </div>
         </div>

@@ -270,38 +270,38 @@ export default function Home() {
               <ul className="list-disc w-full flex justify-between">
                 <div className="flex flex-col">
                   <li className="font-bold text-sm mb-2">
-                    <Link href="/">Chính sách mua hàng</Link>
+                    <Link href="/chinh-sach-mua-hang">Chính sách mua hàng</Link>
                   </li>
                   <li className="font-bold text-sm mb-2">
-                    <Link href="/">Chính sách quyền riêng tư</Link>
+                    <Link href="/chinh-sach-quyen-rieng-tu">Chính sách quyền riêng tư</Link>
                   </li>
                 </div>
                 <div className="flex flex-col">
                   <li className="font-bold text-sm mb-2">
-                    <Link href="/">Chính sách thanh toán</Link>
+                    <Link href="/chinh-sach-thanh-toan">Chính sách thanh toán</Link>
                   </li>
                   <li className="font-bold text-sm mb-2">
-                    <Link href="/">Chính sách đổi trả</Link>
+                    <Link href="/chinh-sach-doi-tra">Chính sách đổi trả</Link>
                   </li>
                 </div>
               </ul>
             </div>
           </div>
         </section>
-        <div className="fixed right-4 left-4 bottom-0">
+        <div className="fixed right-4 left-4 bottom-0 z-10">
           <div className="flex justify-center gap-2 mb-2 max-w-xl m-auto">
-            <div className="flex flex-col gap-2 w-1/2">
+            <div className="flex flex-col gap-1 w-1/2">
               <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[red] rounded-xl" />
               <input type="text" placeholder="Số điện thoại" className="px-4 py-1 border border-[red] rounded-xl" />
             </div>
-            <div className="flex items-center justify-center w-1/2 bg-button rounded-xl">
+            <div className="flex items-center justify-center w-1/2 bg-button rounded-xl cursor-pointer">
               <span className="text-[#fffc01] font-bold uppercase text-[14px]">Bấm để nhận tư vấn</span>
             </div>
           </div>
         </div>
       </main>
-      <footer className="bg-[#fdd86f]">
-        <p className="px-4 py-2 font-semibold text-white uppercase text-center">Sản phẩm không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh</p>
+      <footer className="bg-[#fdd86f] max-w-xl m-auto">
+        <p className="px-4 py-4 font-semibold text-white uppercase text-center">Sản phẩm không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh</p>
       </footer>
     </>
 
