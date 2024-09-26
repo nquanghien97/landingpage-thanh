@@ -224,7 +224,7 @@ export default function Home() {
             <h3 className="text-[#a40202] font-bold text-sm px-4">Sữa Dạ Dày Nutri Nano Curcumin cung cấp dinh dưỡng tương đương 1 bữa ăn đầy đủ, có thể thay thế bữa ăn phụ hàng ngày, giúp bổ sung dưỡng chất một cách tiện lợi và hiệu quả cho sức khỏe dạ dày.</h3>
           </section>
           <div className={`${isViewMore ? '' : 'bg-view-more absolute bottom-0 left-0 right-0 pt-[200px] z-20'} flex justify-center`}>
-            <button className="text-center underline" onClick={() => setIsViewMore(pre => !pre)}>{isViewMore ? 'Rút gọn' : 'Xem thêm'}</button>
+            <button className="text-center text-xl underline font-semibold" onClick={() => setIsViewMore(pre => !pre)}>{isViewMore ? 'Bấm để rút gọn' : 'Bấm để xem thêm'}</button>
           </div>
         </div>
         <Slider3 />
