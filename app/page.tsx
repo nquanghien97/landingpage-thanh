@@ -62,7 +62,7 @@ export default function Home() {
               <div className="overflow-y-auto h-[200px] scrollbar-hidden">
                 <div className="flex w-full">
                   <div className="h-[400px] w-[74px] bg-[url('/section2/image1.png')] bg-cover" />
-                  <div className="w-3/4 text-[10px] font-bold mt-5">
+                  <div className="w-full text-[10px] font-bold mt-5">
                     <p className="mb-1 text-sm leading-6">20% (1000mg/100g bột sữa) mỗi ly tương đương 2kg nghệ tươi hỗ trợ làm lành vùng niêm mạc dạ dày tổn thương</p>
                     <p className="mb-2 text-sm leading-6">Sữa đầu  xuất hiện cuối thời kỳ mang thai và 24h đầu sau sinh tăng cường hệ miễn dịch, chống viêm, hỗ trợ tiêu hóa.</p>
                     <p className="mb-2 text-sm leading-6">Giúp xương chắc khỏe, tăng cường dịch khớp, Hỗ trợ ngăn ngừa đau nhức, thoái hóa xương khớp, loãng xương</p>
@@ -293,7 +293,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <div className="fixed right-4 left-4 bottom-0 z-10">
+        <div className="fixed right-4 left-4 bottom-0 z-10">
           <div className="flex justify-center gap-2 mb-2 max-w-xl m-auto">
             <div className="flex flex-col gap-1 w-1/2">
               <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[red] rounded-xl" />
@@ -303,7 +303,7 @@ export default function Home() {
               <span className="text-[#fffc01] font-bold uppercase text-[14px]">Bấm để nhận tư vấn</span>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className={`${isViewMore ? '' : 'bg-view-more absolute bottom-0 left-0 right-0 pt-[200px] z-20'} flex justify-center`}>
           <button className="text-center underline" onClick={() => setIsViewMore(pre => !pre)}>{isViewMore ? 'Rút gọn' : 'Xem thêm'}</button>
         </div>
