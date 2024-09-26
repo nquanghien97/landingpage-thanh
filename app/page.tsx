@@ -63,7 +63,7 @@ export default function Home() {
                 <div className="h-2 w-5/6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1920 174" fill="rgba(255, 188, 1, 1)"><defs></defs><polygon points="1920 150 0 150 0 0 960 88.5 1920 0 1920 150"></polygon><polygon points="1920 162 0 162 0 12 960 91.6 1920 12 1920 162"></polygon><polygon points="1920 174 0 174 0 24 960 94.8 1920 24 1920 174"></polygon></svg>
                 </div>
-                <div className="overflow-y-auto scrollbar-hidden">
+                <div className="overflow-y-auto h-[300px] scrollbar-hidden">
                   <div className="flex w-full">
                     <div className="h-[702px]">
                       <Image src="/section2/image1.png" alt="" width={186} height={903} className="h-full" />
@@ -223,8 +223,8 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className="">
-              <Image src="/b163da9a9ca83af663b9-removebg-preview-20240924030925-thoc3.png" alt="" width={432} height={577} />
+            <div className="flex justify-center">
+              <Image src="/hop-sua.png" alt="" width={432} height={577} />
             </div>
             <h3 className="text-[#a40202] font-bold text-sm px-4">Sữa Dạ Dày Nutri Nano Curcumin cung cấp dinh dưỡng tương đương 1 bữa ăn đầy đủ, có thể thay thế bữa ăn phụ hàng ngày, giúp bổ sung dưỡng chất một cách tiện lợi và hiệu quả cho sức khỏe dạ dày.</h3>
           </section>
