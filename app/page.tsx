@@ -238,7 +238,7 @@ export default function Home() {
             <Image src="/logo-4-20240923160332-eyt_6.png" alt="" width={750} height={750} />
           </div>
         </section>
-        <section className="bg-[#ccc]">
+        <section className="bg-[url('/download.jpg')] bg-cover bg-center">
           <h3 className="uppercase text-[#853f05] text-2xl font-bold px-4 text-center py-4 bg-text">Quyền lợi khi mua Nutri Nano Curcumin trên gian hàng chính hãng</h3>
           <div className="mt-[-30px]">
             <Image src="/quyen-loi-20240924082300-gneig.png" alt="" width={1288} height={400} />
