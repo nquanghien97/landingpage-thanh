@@ -1,5 +1,7 @@
 'use client';
 
+import LoadingIcon from "@/assets/icons/LoadingIcon";
+import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 const listRadio = [
@@ -25,7 +27,9 @@ function Form() {
     'Họ tên': '',
     'Số điện thoại': '',
     'Địa chỉ': ''
-  })
+  });
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValue({
@@ -33,18 +37,37 @@ function Form() {
       [name]: value,
     });
   }
-  
+
+  const now = new Date(Date.now())
+  const formattedDate = now.toLocaleString('sv-SE', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  }).replace('T', ' ');
+
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    setLoading(true);
     e.preventDefault();
-    const formData = new FormData(e.currentTarget)
-    formData.append('Số lượng', listRadio[checked].label)
-    await fetch("https://script.google.com/macros/s/AKfycbws-zJPI19r7EtE8sIk6Yopsxcbn_DWxeLvtWpRbxh7SaOPCOP27j8o3mGzU7cjoLQg/exec",
-      {
-        method: "POST",
-        body: formData,
-        mode: 'no-cors'
-      }
-    )
+    try {
+      const formData = new FormData(e.currentTarget)
+      formData.append('Thời gian', formattedDate)
+      formData.append('Số lượng', listRadio[checked].label)
+      await fetch("https://script.google.com/macros/s/AKfycbws-zJPI19r7EtE8sIk6Yopsxcbn_DWxeLvtWpRbxh7SaOPCOP27j8o3mGzU7cjoLQg/exec",
+        {
+          method: "POST",
+          body: formData,
+          mode: 'no-cors'
+        }
+      )
+      router.push('/cam-on')
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
   }
   return (
     <div className="mb-4">
@@ -64,6 +87,7 @@ function Form() {
           </div>
         </div>
         <button type="submit" className="flex items-center justify-center bg-button rounded-xl w-2/3 m-auto py-4">
+          {loading && <LoadingIcon />}
           <span className="text-[#fffc01] font-bold uppercase text-[14px]">Bấm đặt hàng ngay</span>
         </button>
       </form>

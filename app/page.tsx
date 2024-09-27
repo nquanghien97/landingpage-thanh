@@ -4,6 +4,7 @@ import AddressIcon from '@/assets/icons/AddressIcon'
 import Phone2Icon from '@/assets/icons/Phone2Icon'
 import PhoneIcon from '@/assets/icons/PhoneIcon'
 import Form from '@/components/Form'
+import FormFixed from '@/components/FormFixed';
 import Section3 from '@/components/sections/Section3'
 import Slider1 from '@/components/Slider1'
 import Slider2 from '@/components/Slider2'
@@ -303,17 +304,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="fixed right-4 left-4 bottom-0 z-10">
-          <div className="flex justify-center gap-2 mb-2 max-w-xl m-auto">
-            <div className="flex flex-col gap-1 w-1/2">
-              <input type="text" placeholder="Họ và tên" className="px-4 py-1 border border-[red] rounded-xl" />
-              <input type="text" placeholder="Số điện thoại" className="px-4 py-1 border border-[red] rounded-xl" />
-            </div>
-            <div className="flex items-center justify-center w-1/2 bg-button rounded-xl cursor-pointer">
-              <span className="text-[#fffc01] font-bold uppercase text-[14px]">Bấm để nhận tư vấn</span>
-            </div>
-          </div>
-        </div>
+        <FormFixed />
       </main>
       <footer className="bg-[#fdd86f] max-w-xl m-auto">
         <p className="px-4 py-4 font-semibold text-white uppercase text-center">Sản phẩm không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh</p>
